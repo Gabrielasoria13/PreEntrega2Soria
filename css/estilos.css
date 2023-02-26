@@ -13,21 +13,20 @@ header{
     background-color: #fcfbba;
     position: fixed;
     width: 100vw;
+    height: 20vh;
+    top: 0;
 }
-.logo_imagen{
-    width: 150px;
-    height: 130px;
-    border-radius: 20px;
-}
-.lista_navegacion {
+/*barra de navegacion*/
+.navbar_ul{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 50px;
-    text-align: center center;
+    padding-top: 0px;
     height: 100%;
+    width: 100%;
+    align-items: center;
 }
 
-li{
+.navbar_ul_li{
     list-style-type: none;
     margin: 20px;
     font-family: 'Dancing Script', cursive;
@@ -35,47 +34,155 @@ li{
     text-align: center center;
     }
 
-
-main{
-    padding-top: 400px;
-    text-align: center;
-    margin-left: 100px;
-
+.logo_imagen{
+    width: 120px;
+    height: 100px;
+    border-radius: 20px;
+    background-size: contain;
 }
-footer{list-style-type: none;
+
+/* Footer*/
+footer{
     font-family: 'Dancing Script', cursive;
-    font-size: 1rem;
+    font-size: 1,5rem;
     display: inline block;
+    background-color: #d1cbfc;
     background-position: bottom;
     }
 
-.lista_footer {
+.footer_ul {list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center center;
     height: 100%;
     }
-section{
-    display: flex;
-    width: 600px;
-    height: 430px;
-    padding-top: 500px;
-    text-align: center center;
+.footer_ul_li{
+    margin: 0.5rem;
 }
-section img{
+/*formato a la pagina de inicio*/
+
+.main_inicio{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.imagen_opaca{
+    background-position: center center;
+    height: 20rem;
+    width: 30rem;
+    opacity: 0.5;
+    overflow: auto;
+}
+.imagen_opaca:hover{
+    opacity: 1;
+}
+.main_inicio_titulo {color: rgb(91, 68, 221);
+padding: 30px;
+text-align: center center;
+}
+.main_inicio_p {color: rgb(91, 68, 221);
+font-size: 20px;
+padding: 30px;
+text-align: center center;
+}
+
+    /* section de Galeria*/
+.section_galeria{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 200px;
+}
+.section_galeria_img{
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
-    opacity: 0.8;
-    transition: 0.5s ease;
+    opacity: 0.5;
+    transition: 0.5s ease;    
+    text-align: center center;
+    width: 50px;
+    height: 400px;
 }
-section img:hover {
+
+.section_galeria_img:hover {
     cursor: crosshair;
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
 }
-main img{
+/*main sobre nosotros*/
+.main_sn_img{
     width: 30rem;
+    padding: 3rem;
 }
+.main_sn{
+    padding-top: 200px;
+    text-align: center;
+    margin-left: 100px;
+}
+/*main como llegar*/
+.main_comollegar{
+    padding-top: 200px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.main_comollegar_iframe{
+    padding: 20px;
+}
+.main_comollegar_p{
+    color: rgb(91, 68, 221);
+    font-size: 20px;
+    padding: 30px;
+    text-align: center center;
+}
+/*main contacto*/
+.main_contacto{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 100px;
+}
+.main_contacto_titulo {color: rgb(91, 68, 221);
+    padding-top: 100px;
+    text-align: center center;}
+
+.container_formulario{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: baseline;
+margin: 20px;
+}
+.titulo_formulario{
+    padding: 2rem;
+
+}
+/*section servicios*/
+.section_servicios{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    text-align: center center;
+
+}
+
+.section_servicios_salon{color: rgb(91, 68, 221);
+    padding: 1rem;
+}
+.section_servicios_parrilla{color: rgb(91, 68, 221);
+    padding: 1rem;
+}
+.img_servicios{
+height: 300px;
+height: 300px;
+padding: 2rem;
+}
+/*diseño mobile*/
+
+
+
+
