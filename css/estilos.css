@@ -8,14 +8,28 @@ html{
 body{
     background-color: #FFADAD;
 }
-
+#grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
+}
 header{
+    grid-area: header;
     background-color: #fcfbba;
-    position: fixed;
+    position: sticky;
     width: 100vw;
     height: 20vh;
     top: 0;
 }
+nav{
+    height: 100%;
+}
+
 /*barra de navegacion*/
 .navbar_ul{
     display: flex;
@@ -41,34 +55,16 @@ header{
     background-size: contain;
 }
 
-/* Footer*/
-footer{
-    font-family: 'Dancing Script', cursive;
-    font-size: 1,5rem;
-    display: inline block;
-    background-color: #d1cbfc;
-    background-position: bottom;
-    }
 
-.footer_ul {list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 10px;
-    text-align: center center;
-    height: 100%;
-    }
-.footer_ul_li{
-    margin: 0.5rem;
-}
 /*formato a la pagina de inicio*/
 
-.main_inicio{
-    height: 100vh;
-    width: 100vw;
+main{
+    grid-area: main;
+    height: 100%;
+    width: 100%;
     text-align: center;
-    padding-top: 200px;
+    margin-top: 0px;
 }
-
 .imagen_opaca{
     background-position: center center;
     height: 20rem;
@@ -79,22 +75,41 @@ footer{
 .imagen_opaca:hover{
     opacity: 1;
 }
-.main_inicio_titulo {color: rgb(91, 68, 221);
+.main_titulo {color: rgb(91, 68, 221);
 padding: 30px;
 text-align: center center;
 }
-.main_inicio_p {color: rgb(91, 68, 221);
+.main_p {color: rgb(91, 68, 221);
 font-size: 20px;
 padding: 30px;
 text-align: center center;
 }
+/* Footer*/
+footer{
+    grid-area: footer;
+    font-family: 'Dancing Script', cursive;
+    background-color: #d1cbfc;
+    background-position: bottom;
+    }
 
+.footer_ul {list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    }
+.footer_ul_li{padding-top: 0,5rem;
+    margin: 0.5rem;    
+    font-size: 20px;
+}
     /* section de Galeria*/
 .section_galeria{
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 200px;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
 }
 .section_galeria_img{
     width: 0px;
@@ -116,39 +131,16 @@ text-align: center center;
 /*main sobre nosotros*/
 .main_sn_img{
     width: 30rem;
-    padding: 3rem;
+    padding: 1rem;
 }
-.main_sn{
-    padding-top: 200px;
-    text-align: center;
-    margin-left: 100px;
-}
+
 /*main como llegar*/
-.main_comollegar{
-    padding-top: 200px;
-    text-align: center;
-    margin-left: 100px;
-}
 
 .main_comollegar_iframe{
     padding: 20px;
 }
-.main_comollegar_p{
-    color: rgb(91, 68, 221);
-    font-size: 20px;
-    padding: 30px;
-    text-align: center center;
-}
+
 /*main contacto*/
-.main_contacto{
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    padding-top: 100px;
-}
-.main_contacto_titulo {color: rgb(91, 68, 221);
-    padding-top: 100px;
-    text-align: center center;}
 
 .container_formulario{
 display: flex;
@@ -157,10 +149,7 @@ justify-content: flex-start;
 align-items: baseline;
 margin: 20px;
 }
-.titulo_formulario{
-    padding: 2rem;
 
-}
 /*section servicios*/
 .section_servicios{
     display: flex;
