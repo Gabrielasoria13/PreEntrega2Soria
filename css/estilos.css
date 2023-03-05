@@ -7,6 +7,7 @@ html{
 }
 body{
     background-color: #FFADAD;
+    font-family: 'Dancing Script', cursive;
 }
 #grid_container{
     display: grid;
@@ -22,7 +23,7 @@ header{
     grid-area: header;
     background-color: #fcfbba;
     position: sticky;
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     top: 0;
 }
@@ -34,7 +35,7 @@ nav{
 .navbar_ul{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -76,12 +77,12 @@ main{
     opacity: 1;
 }
 .main_titulo {color: rgb(91, 68, 221);
-padding: 30px;
+margin: 30px;
 text-align: center center;
 }
 .main_p {color: rgb(91, 68, 221);
 font-size: 20px;
-padding: 30px;
+margin: 30px;
 text-align: center center;
 }
 /* Footer*/
@@ -96,6 +97,7 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0;
     height: 100%;
     width: 100%;
 
@@ -109,7 +111,6 @@ footer{
     display: flex;
     width: 100%;
     height: 100%;
-    padding: 50px;
 }
 .section_galeria_img{
     width: 0px;
@@ -124,7 +125,7 @@ footer{
 
 .section_galeria_img:hover {
     cursor: crosshair;
-    width: 300px;
+    width: 200px;
     opacity: 1;
     filter: contrast(120%);
 }
@@ -235,11 +236,10 @@ padding: 2rem;
     }
     .main_titulo {color: rgb(91, 68, 221);
         font-size: 15px;
-    text-align: center center;
+        text-align: center center;
     }
     .main_p {color: rgb(91, 68, 221);
-    font-size: 10px;
-    padding: 30px;
+    font-size: 13px;
     text-align: center center;
     }
     footer{
@@ -284,5 +284,18 @@ padding: 2rem;
         height: 10rem;
         padding: 10px;
     }
-
+    .section_galeria{
+        flex-direction: column; 
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .section_galeria_img{
+        opacity: 1;
+        padding: 0;
+        width: 200px;
+        height: 150px;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
 }
